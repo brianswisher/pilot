@@ -40,19 +40,15 @@ var CounterComponent = React.createClass({
 });
 
 var Root = React.createClass({
-  getInitialState: function(){
-    return {
-      count: null,
-      store: null
-    };
-  },
-
   componentWillMount: function(){
-    this.state.store = createStore(counter);
-    this.state.store.subscribe(this.update);
+    this.setState({
+      count: 0,
+      store: createStore(counter)
+    });
   },
 
   componentDidMount: function(){
+    this.state.store.subscribe(this.update);
     this.update();
   },
 
