@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "https://github.com/brianswisher/pilot",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rwb static && npm run update",
     "start": "rwb serve",
